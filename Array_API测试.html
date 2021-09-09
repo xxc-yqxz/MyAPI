@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./Array.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 声明一个数组 
+        let arr = [1, 2, 3, 4, 5, 10000, 20000]
+
+        // map
+        // const result = map(arr, (item, index) => {
+        //     return item * 10
+        // })
+        // console.log(result)
+
+
+
+        // reduce
+        // let result = arr.reduce(function (res, value) {
+        //     return res + value
+        // }, 0)
+        // console.log(result) // 15
+        // let result = reduce(arr, function (res, value) {
+        //     return res + value
+        // }, 0)
+
+
+
+        // filter
+        // const result = arr.filter(item => item % 2 === 1)
+        // const result = filter(arr, item => item % 2 === 1)
+        // console.log(result)
+
+
+        // find     ->返回数组中第一个满足条件的数，没有则返回undefined
+        // const result = arr.find(item => {
+        //     return item > 1000;
+        // });
+        // const result = find(arr, item => {
+        //     return item > 1000;
+        // })
+        // console.log(result)
+
+
+        // findIndex    -> 返回数组中第一个满足条件的数的索引，若没有，返回-1
+        // const result = arr.findIndex(item => {
+        //     return item > 1000;
+        // });
+        // const result = findIndex(arr, (item, index) => {
+        //     return item > 2;
+        // })
+
+        // console.log(result);
+
+
+        // every  -> 如果数组中的每个元素都满足测试函数，返回true，否则返回false
+        arr = [1, 2, 3, 4, 2077, 5, 1024]
+        // const result = arr.every(item => {
+        //     return item > 1;
+        // })
+        // console.log(result) // false
+        // const result = every(arr, item => {
+        //     return item > 1;
+        // })
+        // console.log(result)
+
+
+        // some -> 如果数组中至少有一个元素满足测试函数，则返回true，否则返回false
+        // const result = arr.some(item => {
+        //     return item > 2000;
+        // })
+        // console.log(result) // true
+        const result = some(arr, item => {
+            return item > 1;
+        })
+        console.log(result)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流测试</title>
+    <script type="text/javascript" src="./throttle.js"></script>
+    <style>
+        body {
+            height: 2000px;
+            background: linear-gradient(#125, #eae);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="test">
+        123456
+    </button>
+    <script type="text/javascript">
+        document.querySelector('.test').addEventListener('click', throttle(function (e) {
+            console.log(this)   // 此处的this是事件绑定对象
+        }, 10000))
+    </script>
+</body>
+
+</html>

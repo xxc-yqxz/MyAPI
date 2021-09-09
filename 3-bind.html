@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./bind.js"></script>
+    <script type="text/javascript" src="./call.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 声明一个函数
+        function add(a, b) {
+            // console.log(this);
+            console.log(arguments)  //10, 20, 30, 40        -> 说明bind传递额的参数是靠前的，而fn3传递的参数是靠后的
+            return a + b + this.c
+        }
+        // 声明一个对象
+        let obj = {
+            c: 521
+        };
+        // 添加全局属性
+        window.c = 1314;
+
+        // 执行 函数
+        // let fn = bind(add, obj, 10, 20)
+        // console.log(fn())
+
+        // let fn2 = bind(add, obj);
+        // console.log(fn2(10, 20))
+
+        // let fn3 = add.bind(obj, 10, 20);
+        // console.log(fn3(30, 40));
+
+        let fn4 = bind(add, obj, 10, 20);
+        console.log(fn4(30, 50));
+    </script>
+</body>
+
+</html>
