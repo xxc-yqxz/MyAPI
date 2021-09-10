@@ -1,0 +1,27 @@
+{
+  "name": "xxc-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/atguigu-utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:watch": "webpack --watch"
+  },
+  "keywords": [
+    "xxc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxc-yqxz/-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxc-yqxz/-/issues"
+  },
+  "homepage": "https://github.com/xxc-yqxz/-#readme",
+  "dependencies": {
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: pink;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .inner {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: inherit;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <script type="text/javascript">
+        let outer = document.querySelector('.outer');
+        let inner = document.querySelector('.inner');
+
+        outer.addEventListener('click', function () {
+            console.log('捕获 outer')
+        }, true)
+
+        inner.addEventListener('click', function () {
+            console.log('捕获 inner')
+        }, true)
+
+        outer.addEventListener('click', function () {
+            console.log('冒泡 outer')
+        })
+
+        outer.addEventListener('click', function () {
+            console.log('冒泡 inner')
+        })
+    </script>
+</body>
+
+</html>

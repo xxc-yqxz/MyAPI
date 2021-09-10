@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建对象测试</title>
+    <script type="text/javascript" src="./newInstance.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+
+            // 使用new创建对象的规则：不return与return普通类型。都是返回一个实例对象。若return一个对象类型，则返回这个对象。 
+            // return {a:100};
+            // return [];
+            // return function () { }
+
+            return 'iloveyou';
+        }
+        // console.log(new Person())
+
+        // 调用newInstance函数创建对象
+        let obj = newInstance(Person, '张三', 18);
+
+
+        console.log(obj);
+    </script>
+</body>
+
+</html>

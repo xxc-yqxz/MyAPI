@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>防抖测试</title>
-    <script type="text/javascript" src="./src/debounce.js"></script>
+    <title>删除数组元素</title>
+    <script type="text/javascript" src="./pull.js"></script>
 </head>
 
 <body>
-    <input type="text">
     <script type="text/javascript">
-        let input = document.querySelector('input')
-        input.onkeydown = debounce(function (e) {
-            console.log(e.keyCode);
-        }, 1000)
+        let arr = [1, 3, 5, 3, 7]
+        // console.log(pull(arr, 2, 7, 3, 7))
+        // console.log(arr)
+
+        console.log(pullAll(arr, [2, 3, 7]))
+        console.log(arr)
     </script>
 </body>
 

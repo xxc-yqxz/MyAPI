@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发送AJAX请求</title>
+    <script type="text/javascript" src="./axios.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        axios({
+            // 请求的类型
+            method: 'POST',
+            // 请求的url
+            url: 'https://www.fastmock.site/mock/8839ca15aa20dee1e2604afc50105e00/xxc/token',
+            // url参数
+            params: {
+                a: 100,
+                b: 200
+            },
+            // 请求体
+            data: {
+                c: 300,
+                d: 400
+            }
+        }).then(response => {
+            console.log(response);
+        }).catch(reason => {
+            console.log(reason)
+        });
+
+        // 调用对象方法
+        axios.get('https://www.fastmock.site/mock/8839ca15aa20dee1e2604afc50105e00/xxc/category', {
+            params: {
+                a: 100,
+                b: 200
+            }
+        }).then(response => {
+            console.log(response)
+        })
+        axios.post('https://www.fastmock.site/mock/8839ca15aa20dee1e2604afc50105e00/xxc/token', {
+            params: {
+                a: 100,
+                b: 200
+            }
+        }).then(response => {
+            console.log(response)
+        })
+        axios.put('https://www.fastmock.site/mock/8839ca15aa20dee1e2604afc50105e00/xxc/user', {
+            params: {
+                a: 100,
+                b: 200
+            }
+        }).then(response => {
+            console.log(response)
+        })
+        axios.delete('https://www.fastmock.site/mock/8839ca15aa20dee1e2604afc50105e00/xxc/service/list', {
+            params: {
+                a: 100,
+                b: 200
+            }
+        }).then(response => {
+            console.log(response)
+        })
+    </script>
+</body>
+
+</html>
